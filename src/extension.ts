@@ -1,45 +1,38 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import axios from 'axios';
 
 const url='http://tinyurl.com/api-create.php?url=';
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "shortenurl" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('shortenurl.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from shortenurl!');
-		vscode.window.showInformationMessage('HEY ROSS!');
-
 		const editor = vscode.window.activeTextEditor;
 
 		if (editor) {
 			const document = editor.document;
+			// TODO add support for multiple selections
+			// editor.selections
 			const selection = editor.selection;
+			const word = document.getText(selection);		
 
-			const word = document.getText(selection);
-			
-			
-			console.log(url + word);
 			axios.get(url + word)
 			.then(response => {
-				console.log(response.data);
+				let shortened = response.data;
+				if (shortened.length >= word.length) {
+					console.log('NOTE: shortened URL is not shorter')
+				}
+				editor.edit(editBuilder => {
+					editBuilder.replace(selection, shortened);
+				});
+
 			})
 			.catch(error => {
-				console.log(error)
-			})
+				if (error.response.status == 400) {
+					vscode.window.showErrorMessage('Not a valid URL', error.message);
+				}
+				else {
+					vscode.window.showErrorMessage('Unexpected Error', error.message);
+				}
+			});
 		}
 
 	});
@@ -47,5 +40,4 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 }
 
-// this method is called when your extension is deactivated
 export function deactivate() {}

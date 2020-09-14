@@ -2,8 +2,8 @@
 
 All notable changes to the "shortenurl" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 1.0.0
 
-## [Unreleased]
+- Shorten URLs with a command
+- Shorten URLs from context menu
 
-- Initial release

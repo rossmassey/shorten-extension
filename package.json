@@ -1,8 +1,14 @@
 {
 	"name": "shortenurl",
-	"displayName": "shortenurl",
+	"displayName": "Shorten URL",
 	"description": "Shorten URLs with TinyURL",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"publisher": "RossMassey",
+	"icon": "logo.png",
+	"repository": {
+		"type": "git",
+		"urL": "https://github.com/rossmassey/shorten-extension.git"
+	},
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -17,9 +23,18 @@
 		"commands": [
 			{
 				"command": "shortenurl.helloWorld",
-				"title": "shorten"
+				"title": "Convert to TinyURL"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorHasSelection",
+					"command": "shortenurl.helloWorld",
+					"group": "1_modification"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
