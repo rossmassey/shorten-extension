@@ -2,7 +2,7 @@
 	"name": "shortenurl",
 	"displayName": "Shorten URL",
 	"description": "Shorten URLs with TinyURL",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "RossMassey",
 	"icon": "logo.png",
 	"repository": {
