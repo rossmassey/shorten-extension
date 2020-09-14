@@ -15,21 +15,21 @@ If the selection is a valid URL, it is replaced with a TinyURL redirect
 
 ### Invoking
 
->`https://www.website.com/longlonglonglonglonglonglonglonglong.html`
->
->>**Right Click** -> *Covert to TinyURL*
->
->`http://tinyurl.com/abcdef`
+Selected URL: `https://www.website.com/longlonglonglonglonglonglonglonglong.html`
 
-*OR*
+>**Right Click** -> *Covert to TinyURL*
 
->`https://www.website.com/longlonglonglonglonglonglonglonglong.html`
+Selected URL: `http://tinyurl.com/abcdef`
+
+**OR**
+
+Selected URL: `https://www.website.com/longlonglonglonglonglonglonglonglong.html`
+
+>**[CTRL] [SHIFT] [P]**
 >
->>**[CTRL] [SHIFT] [P]**
->>
->>*>Convert to TinyURL*
->
->`http://tinyurl.com/abcdef`
+>*>Convert to TinyURL*
+
+Selected URL: `http://tinyurl.com/abcdef`
 
 ## Requirements
 
