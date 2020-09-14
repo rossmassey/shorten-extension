@@ -21,7 +21,7 @@ If the selection is a valid URL, it is replaced with a TinyURL redirect
 >
 >`http://tinyurl.com/abcdef`
 
-### OR
+*OR*
 
 >`https://www.website.com/longlonglonglonglonglonglonglonglong.html`
 >
@@ -30,3 +30,7 @@ If the selection is a valid URL, it is replaced with a TinyURL redirect
 >>*>Convert to TinyURL*
 >
 >`http://tinyurl.com/abcdef`
+
+## Requirements
+
+- VSCode 1.49+

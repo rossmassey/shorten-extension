@@ -2,6 +2,10 @@
 
 All notable changes to the "shortenurl" extension will be documented in this file.
 
+## 1.0.2
+- Fix typo in package.json
+- Add required VSCode version to README
+
 ## 1.0.1
 - Add badges to README
 

@@ -2,12 +2,12 @@
 	"name": "shortenurl",
 	"displayName": "Shorten URL",
 	"description": "Shorten URLs with TinyURL",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "RossMassey",
 	"icon": "logo.png",
 	"repository": {
 		"type": "git",
-		"urL": "https://github.com/rossmassey/shorten-extension.git"
+		"url": "https://github.com/rossmassey/shorten-extension.git"
 	},
 	"engines": {
 		"vscode": "^1.49.0"
