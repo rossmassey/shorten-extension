@@ -2,7 +2,7 @@
 
 Adds an option to the context menu to shorten the selected URL to a TinyURL
 
-![Extension demonstration](demo.gif)
+![Extension demonstration](https://raw.githubusercontent.com/rossmassey/shorten-extension/master/demo.gif)
 
 ## Features
 
