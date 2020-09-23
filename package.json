@@ -2,7 +2,7 @@
 	"name": "shortenurl",
 	"displayName": "Shorten URL",
 	"description": "Shorten URLs with TinyURL",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"publisher": "RossMassey",
 	"icon": "logo.png",
 	"repository": {
@@ -16,21 +16,31 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:shortenurl.helloWorld"
+		"onCommand:shortenurl.regular",
+		"onCommand:shortenurl.alias"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "shortenurl.helloWorld",
+				"command": "shortenurl.regular",
 				"title": "Convert to TinyURL"
+			},
+			{
+				"command": "shortenurl.alias",
+				"title": "Convert to TinyURL with alias"
 			}
 		],
 		"menus": {
 			"editor/context": [
 				{
 					"when": "editorHasSelection",
-					"command": "shortenurl.helloWorld",
+					"command": "shortenurl.regular",
+					"group": "1_modification"
+				},
+				{
+					"when": "editorHasSelection",
+					"command": "shortenurl.alias",
 					"group": "1_modification"
 				}
 			]

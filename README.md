@@ -13,6 +13,9 @@ Adds an option to the context menu to shorten the selected URL to a TinyURL
 
 If the selection is a valid URL, it is replaced with a TinyURL redirect
 
+You can also enter a custom URL to be created, if available
+(i.e. tinyurl.com/your_alias )
+
 ### Invoking
 
 Selected URL: `https://www.website.com/longlonglonglonglonglonglonglonglong.html`
